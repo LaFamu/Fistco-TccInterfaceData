@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{727A2F37-3319-430D-935A-7272668EFBFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JSDG.CBI.A</RootNamespace>
+    <AssemblyName>JSDG.CBI.A</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\JSDG.Platform\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ETBAttribute\BinaryModelAttribute\BinaryToDeviceBaseAttribute.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBAttribute\BinaryModelAttribute\MertoBinaryToDeviceAttribute.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBAttribute\ExcelModelAttribute\ExcelModelClassBaseAttribute.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBAttribute\ExcelModelAttribute\ExcelModelPropertyBaseAttribute.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBAttribute\ExcelModelAttribute\MetroExcelModelClassAttribute.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBAttribute\ExcelModelAttribute\MetroExcelModelPropertyAttribute.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBConfig\DeviceAttributeEnum\ConstantInternal.cs" />
+    <Compile Include="ETBConfig\ETB_APPConfig.cs" />
+    <Compile Include="ETBModel\BinaryModel\BaseType.cs" />
+    <Compile Include="ETBModel\BinaryModel\BinaryStruct\BaseStruct.cs" />
+    <Compile Include="ETBModel\BinaryModel\BinaryStruct\CommCbiTccStruct.cs" />
+    <Compile Include="ETBModel\BinaryModel\BinaryStruct\Head_Tail_Struct.cs" />
+    <Compile Include="ETBModel\BinaryModel\DATStruct.cs" />
+    <Compile Include="ETBModel\ExcelModel\InterLockData.cs" />
+    <Compile Include="ETBModel\ExcelModel\InterLock\CommCbiModel.cs" />
+    <Compile Include="ETBModel\ExcelModel\InterLock\InterLockBase.cs" />
+    <Compile Include="ETBProcess\CheckDataProcess\CheckAllDataProcess.cs" />
+    <Compile Include="ETBProcess\CheckDataProcess\CheckInterLockDataProcess.cs" />
+    <Compile Include="ETBProcess\ConvertModelProcess\ConvertToBinary.cs" />
+    <Compile Include="ETBProcess\ConvertModelProcess\ConvertToByte.cs" />
+    <Compile Include="ETBProcess\ExcelToDatProcess.cs" />
+    <Compile Include="ETBProcess\ExportDataProcess\DataOutput.cs" />
+    <Compile Include="ETBProcess\ReadExcelProcess\ReadExcel.cs" />
+    <Compile Include="ETBUtil\BytesConverter.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBUtil\CrcCalculateHelper\CRC16.cs" />
+    <Compile Include="ETBUtil\CrcCalculateHelper\CRC32.cs" />
+    <Compile Include="ETBUtil\ETBExtensionMethods.cs" />
+    <Compile Include="ETBUtil\ETBExtensionToBytes.cs" />
+    <Compile Include="ETBUtil\LogHelper.cs" />
+    <Compile Include="ETBUtil\ObjectHelper.cs" />
+    <Compile Include="ETBUtil\PropertyValueItem.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ETBUtil\StringOperation.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ETBConfig\ConfigFile\ETB_A.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="ETBConfig\ConfigFile\packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

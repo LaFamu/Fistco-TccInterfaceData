@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="CdmsWindow" TargetType="{x:Type Window}">
+        <Setter Property="FontFamily" Value="微软雅黑" />
+        <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}" />
+        <Setter Property="Foreground" Value="{DynamicResource WindowText}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource WindowBorder}" />
+        <Setter Property="BorderThickness" Value="1" />
+
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CornerRadius="0"
+                              GlassFrameThickness="1"
+                              NonClientFrameEdges="None"
+                              UseAeroCaptionButtons="False" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

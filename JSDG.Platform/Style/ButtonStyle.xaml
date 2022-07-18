@@ -1,0 +1,295 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="d">
+
+    <Style x:Key="btnstyle"
+           BasedOn="{StaticResource {x:Type Button}}"
+           TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Margin" Value="10,0" />
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="btnSearchStyle"  BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="5" Background="#FF2B6595">
+                        <Viewbox Margin="10,5">
+                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Path Data="F1M16.59,21.929C17.789,21.089,19.408,19.439,20.549,17.519L13.711,17.519C14.401,19.289,15.18,20.489,16.59,21.929 M9.811,17.849L9.811,15.329C11.19,15.599,12.57,15.659,16.231,15.659L16.231,13.079 9.721,13.079C9.84,12.36,9.93,11.25,9.93,10.44L9.93,5.49C9.93,4.29 9.871,3.45 9.721,2.76 11.61,2.61 12.541,2.4 13.68,1.77 13.92,2.28 14.58,3.48 14.971,3.69 15.24,3.84 15.09,4.05 14.789,4.02 14.369,3.96 13.651,4.02 12.119,4.35L12.119,6.84C13.141,6.84,13.891,6.81,14.641,6.66L14.641,8.97C13.92,8.88,13.141,8.85,12.119,8.82L12.119,11.19 16.231,11.19 16.231,4.8C16.231,2.28 16.141,0.87 15.99,0.12 16.86,0.241 17.699,0.3 18.748,0.3 19.168,0.3 19.199,0.54 18.809,0.78 18.539,0.96 18.418,1.53 18.418,2.52L18.418,11.19 22.828,11.19 22.828,8.67C21.629,8.67,20.699,8.7,19.949,8.82L19.949,6.51C20.729,6.66,21.629,6.69,22.828,6.69L22.828,4.14C21.69,4.14,20.94,4.17,20.039,4.35L20.039,1.92C20.94,2.1 21.6,2.16 22.619,2.16 23.699,2.16 24.508,2.1 25.229,1.92 25.11,2.58 25.02,3.78 25.02,4.62L25.02,10.47C25.02,11.58,25.11,12.39,25.229,13.079L18.418,13.079 18.418,15.659C21.508,15.629 23.039,15.509 24.299,15.329 22.828,18.509 20.729,21.299 18.6,23.009 20.61,23.759 23.879,24.449 27.029,24.419 26.248,25.589 25.86,26.489 25.588,27.479 21.838,26.789 18.93,25.799 16.59,24.389 13.92,25.979 11.76,26.849 9.121,27.479 8.85,26.639 8.43,25.979 7.59,25.079 9.901,24.899 12.481,24.089 14.67,23.009 13.68,22.169 12.449,20.129 11.49,17.609 11.01,17.669 10.44,17.729 9.811,17.849 M3.811,8.4C2.281,8.43,1.231,8.52,0.33,8.67L0.33,6.15C1.231,6.3 2.281,6.36 3.811,6.39 3.811,3.21 3.66,0.87 3.481,0 4.561,0.18 5.43,0.241 6.031,0.21 6.961,0.18 7.08,0.48 6.451,0.87 6.121,1.08 6.061,1.53 6.061,2.04L6.061,6.36C7.141,6.33,7.951,6.27,8.67,6.15L8.67,8.67C7.951,8.55,7.141,8.46,6.061,8.43L6.061,12.779C6.961,12.42 7.86,12 8.67,11.55 8.461,12.539 8.52,13.2 8.82,14.099 7.891,14.369 6.961,14.699 6.061,15.059L6.061,23.759C6.061,26.009 5.611,26.309 1.471,26.669 1.381,25.529 1.231,25.079 0.481,23.819 3.061,24.059 3.811,23.759 3.811,22.829L3.811,16.019C2.76,16.529 1.711,17.129 0.692,17.819 0.6,16.619 0.361,15.599 0,14.609 1.231,14.339 2.52,14.009 3.811,13.589z" Fill="White" Margin="42,0,55.971,0.521"/>
+                            <Path Data="F1M22.65,26.639C20.73,25.049,18.869,23.729,16.47,22.469L18.089,20.819C20.22,21.929,22.019,22.979,24.42,24.479z M8.609,14.999C6.361,15.179 5.4,15.239 4.47,15.419 4.349,14.759 4.201,14.309 3.929,13.709 6.509,12.869 8.4,11.85 10.38,9.57L2.429,9.57 2.429,13.109 0.15,13.109 0.15,7.41C2.191,7.53,4.83,7.59,11.189,7.59L11.189,4.95C6.839,4.95,3.75,5.07,1.32,5.25L1.32,2.7C3.81,2.88 6.839,2.97 11.189,2.97 11.16,1.8 11.099,0.63 11.009,0 11.849,0.15 13.019,0.21 13.98,0.181 14.461,0.15 14.55,0.33 14.189,0.63 13.8,0.96 13.619,1.38 13.619,1.89L13.619,2.97C17.82,2.94,20.849,2.85,23.218,2.7L23.218,5.25C20.849,5.07,17.82,4.98,13.619,4.95L13.619,7.59C19.89,7.59,22.529,7.53,24.568,7.41L24.568,12.63 22.23,12.63 22.23,9.57 11.67,9.57C12.24,9.87 12.81,10.11 13.349,10.26 14.009,10.47 14.041,10.77 13.23,10.8 12.66,10.83 12.211,10.98 8.49,13.499 10.529,13.469 12.3,13.379 14.189,13.229 15.39,12.48 16.439,11.76 17.189,11.13 18.029,11.76 18.72,12.15 19.47,12.45 20.22,12.749 20.189,12.989 19.32,13.049 18.839,13.079 17.699,13.529 15.63,14.699 13.32,15.989 10.949,17.189 8.429,18.209 12.06,18.059 15.269,17.909 18.779,17.639 18.179,17.069 17.55,16.559 16.89,16.079L18.689,15.089C20.369,16.409,21.779,17.579,23.4,19.139L21.39,20.699C21.089,20.249,20.759,19.829,20.429,19.439L13.83,19.739 13.83,25.169C13.83,26.999 13.56,27.269 9.599,27.779 9.359,26.819 9.029,26.159 8.519,25.229 10.949,25.349 11.519,25.019 11.519,24.299L11.519,19.829C6.42,20.039 4.861,20.099 2.73,20.309 2.64,19.499 2.49,18.929 2.191,18.269 5.099,18.059 7.291,17.489 11.82,14.729z M8.041,22.829C7.679,22.859 6.99,23.189 1.861,26.459 1.441,25.769 0.871,25.169 0,24.629 2.461,23.609 3.99,22.709 6.121,20.879 6.81,21.509 7.56,21.989 8.16,22.319 8.609,22.589 8.519,22.799 8.041,22.829" Fill="White" Margin="100.216,0.11,0.216,0.111"/>
+                            <Path Data="M13.998,4.157C16.122,7.467 15.161,11.872 11.853,13.997 8.543,16.122 4.139,15.161 2.012,11.852 -0.113,8.544 0.848,4.137 4.158,2.012 7.467,-0.113 11.873,0.847 13.998,4.157z" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="2" StrokeLineJoin="Round" Margin="0,2,108.99,9.99"/>
+                            <Path Data="M0.841,0.54L6.779,9.791" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="2" StrokeLineJoin="Round" Margin="11.189,16,106.19,1.668"/>
+                        </Grid>
+                        </Viewbox>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="btnAddStyle"  BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="5" Background="Transparent">
+                        <Viewbox  Margin="10,5">
+                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Path Data="M29.348,15.174C29.348,23.002 23.002,29.348 15.174,29.348 7.346,29.348 1,23.002 1,15.174 1,7.346 7.346,1 15.174,1 23.002,1 29.348,7.346 29.348,15.174z" 
+                                  StrokeStartLineCap="Round" 
+                                  StrokeEndLineCap="Round" 
+                                  Stroke="#FF2B6595" 
+                                  StrokeThickness="2" 
+                                  StrokeLineJoin="Round" 
+                                  Margin="0,0,-0.348,-0.348"/>
+                            <Path Data="M0,1L18.23,1" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="#FF2B6595" StrokeThickness="2" StrokeLineJoin="Round" Margin="6,14,5.77,14"/>
+                            <Path Data="M1,0L1,18.23" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="#FF2B6595" StrokeThickness="2" StrokeLineJoin="Round" Margin="14,6,14,5.77"/>
+                        </Grid>
+                        </Viewbox>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="btnDelStyle"  BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="5" Background="Transparent">
+                        <Viewbox  Margin="10,5">
+                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Path Data="M25.195,25.195C19.66,30.73 10.685,30.73 5.152,25.195 -0.383,19.66 -0.383,10.687 5.152,5.152 10.685,-0.383 19.66,-0.383 25.195,5.152 30.73,10.687 30.73,19.66 25.195,25.195z" 
+                                  StrokeStartLineCap="Round" 
+                                  StrokeEndLineCap="Round" 
+                                  Stroke="#FF2B6595" 
+                                  StrokeThickness="2" 
+                                  StrokeLineJoin="Round" 
+                                  Margin="0,0,-0.346,-0.346"/>
+                            <Path Data="M0.707,0.707L13.598,13.598" 
+                                  StrokeStartLineCap="Round" 
+                                  StrokeEndLineCap="Round" 
+                                  Stroke="#FF2B6595" 
+                                  StrokeThickness="2" 
+                                  StrokeLineJoin="Round" 
+                                  Margin="8,8,7.695,7.695"/>
+                            <Path Data="M13.598,0.707L0.707,13.598" 
+                                  StrokeStartLineCap="Round" 
+                                  StrokeEndLineCap="Round" 
+                                  Stroke="#FF2B6595" 
+                                  StrokeThickness="2" 
+                                  StrokeLineJoin="Round" 
+                                  Margin="8,8,7.695,7.695"/>
+                        </Grid>
+                        </Viewbox>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="btnExcelStyle"  BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="FontFamily" Value="微软雅黑"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#FFE9F5FD"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="5" Background="#FF2B6595">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                          Content="{TemplateBinding Content}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="btnColumSetStyle"  BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="FontFamily" Value="微软雅黑"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#FFE9F5FD"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="5" Background="#FF2B6595">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                          Content="{TemplateBinding Content}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btnStop" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Border BorderBrush="Black"
+                                BorderThickness="1">
+                            <Path x:Name="path"
+                                  Width="Auto"
+                                  HorizontalAlignment="Center"
+                                  Data="M-0.25016416,-0.33583344 C4.0078648,8.4973453 -0.41684104,15.580557 -0.41684104,15.580557 -0.41684104,15.580557 18.917678,15.664223 18.917678,15.664223 18.917678,15.664223 18.917761,-0.41950215 18.917761,-0.41950215 z"
+                                  Fill="#FF1D114F"
+                                  Stretch="Fill"
+                                  Stroke="#FFFAFAFA" />
+                        </Border>
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True" />
+                        <Trigger Property="IsDefaulted" Value="True" />
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="#FF9D7AD8" />
+                            <!--  外发光效果  -->
+                            <Setter TargetName="path" Property="BitmapEffect">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="#FF9D7AD8"
+                                                           GlowSize="15"
+                                                           Noise="0"
+                                                           Opacity="0.8" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="path" Property="Stroke" Value="#FF33256E" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="#FF6B46A9" />
+                            <!--  外发光效果  -->
+                            <Setter TargetName="path" Property="BitmapEffect">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="#FF9D7AD8"
+                                                           GlowSize="10"
+                                                           Noise="0"
+                                                           Opacity="0.8" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="path" Property="Stroke" Value="#FF33256E" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" />
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btnLeftAndRight" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Border x:Name="border"
+                                Background="#FF1C104E"
+                                BorderBrush="White"
+                                BorderThickness="1"
+                                CornerRadius="2" />
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True" />
+                        <Trigger Property="IsDefaulted" Value="True" />
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF9D7AD8" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF33256E" />
+                            <!--  外发光效果  -->
+                            <Setter TargetName="border" Property="BitmapEffect">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="#FF9D7AD8"
+                                                           GlowSize="15"
+                                                           Noise="0"
+                                                           Opacity="0.8" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF6B46A9" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF33256E" />
+                            <!--  外发光效果  -->
+                            <Setter TargetName="border" Property="BitmapEffect">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="#FF9D7AD8"
+                                                           GlowSize="10"
+                                                           Noise="0"
+                                                           Opacity="0.8" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" />
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PlayButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Margin="0"
+                                 Fill="White"
+                                 Stroke="Black" />
+                        <Border x:Name="border"
+                                Background="#FF1D114F"
+                                BorderBrush="{x:Null}"
+                                BorderThickness="2"
+                                CornerRadius="30" />
+                        <ContentPresenter x:Name="contentPresenter"
+                                          Margin="5"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          d:LayoutOverrides="Height" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True" />
+                        <Trigger Property="IsDefaulted" Value="True" />
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF9D7AD8" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF33256E" />
+                            <!--  外发光效果  -->
+                            <Setter TargetName="border" Property="BitmapEffect">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="#FF9D7AD8"
+                                                           GlowSize="10"
+                                                           Noise="0"
+                                                           Opacity="0.8" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="contentPresenter" Property="HorizontalAlignment" Value="Center" />
+                            <Setter TargetName="contentPresenter" Property="VerticalAlignment" Value="Center" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF6B46A9" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF33256E" />
+                            <!--  外发光效果  -->
+                            <Setter TargetName="border" Property="BitmapEffect">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="#FF9D7AD8"
+                                                           GlowSize="10"
+                                                           Noise="0"
+                                                           Opacity="0.8" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" />
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontFamily" Value="华文琥珀" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+</ResourceDictionary>

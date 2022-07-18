@@ -1,0 +1,162 @@
+﻿<UserControl x:Class="JSDG.Platform.Content.ETBDataGeneratorUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <Grid MinHeight="400">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="460"/>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Margin="{StaticResource SplitLeft}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <GroupBox Grid.Row="0" Margin="0,0,14,0" BorderBrush="#DCDCDC">
+                    <GroupBox.Header>数据生成</GroupBox.Header>
+                    <GroupBox.Content>
+                        <Grid>
+                            <StackPanel MinWidth="400" Orientation="Vertical">
+
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type StackPanel}">
+                                        <Setter Property="Orientation" Value="Horizontal" />
+                                        <Setter Property="Margin" Value="0,0,0,4" />
+                                    </Style>
+                                    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+                                        <Setter Property="Width" Value="100" />
+                                        <Setter Property="VerticalAlignment" Value="Center" />
+                                    </Style>
+                                    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">
+                                        <Setter Property="Padding" Value="0,3" />
+                                    </Style>
+                                    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource {x:Type RadioButton}}">
+                                        <Setter Property="Padding" Value="0,3" />
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <StackPanel Margin="2,5,0,0">
+                                    <!--<RadioButton x:Name="DoubleStrandsRadioBtn" Content="是否双链" IsChecked="True"  Click="DoubleStrandsRadioBtn_Click" />-->
+                                    <Label Content="选择双链:" Width="65" Margin="20,0,0,0" />
+                                    <ComboBox x:Name="ComboxState" Width="60" >
+                                        <ComboBoxItem Content="A链" IsSelected="True"/>
+                                        <ComboBoxItem Content="B链"/>
+                                    </ComboBox>
+                                </StackPanel>
+
+                                <StackPanel Margin="2,5,0,0">
+                                    <Label Content="输入路径:" Width="65" Margin="20,0,0,0" />
+                                    <TextBox x:Name="InputPathTextBox" IsReadOnly="True" Width="275" Height="24" TextChanged="InputPathTextBox_TextChanged" />
+                                    <Button x:Name="InputPathButton" Content="选择" Margin="5,0,0,0" Click="InputPathButton_Click"/>
+                                </StackPanel>
+
+                                <StackPanel Margin="2,5,0,0">
+                                    <Label Content="输出路径:" Width="65" Margin="20,0,0,0" />
+                                    <TextBox x:Name="OutputPathTextBox" IsReadOnly="True" Width="275" Height="24" />
+                                    <Button x:Name="OutputPathButton" Content="选择" Margin="5,0,0,0" Click="OutputPathButton_Click"/>
+                                </StackPanel>
+                                <!--<StackPanel Margin="2,5,0,0">
+                                    <Label Content="选择控区:" Width="65" Margin="20,0,0,0"></Label>
+                                    <ComboBox x:Name="cb"  Width="100" SelectedIndex="10">
+                                        <ComboBoxItem Content="ZC1"></ComboBoxItem>
+                                        <ComboBoxItem Content="ZC2"></ComboBoxItem>
+                                        <ComboBoxItem Content="ZC3"></ComboBoxItem>
+                                        <ComboBoxItem Content="ZC4"></ComboBoxItem>
+                                        <ComboBoxItem Content="ZC5"></ComboBoxItem>
+                                        <ComboBoxItem Content="ZC6"></ComboBoxItem>
+                                        <ComboBoxItem Content="ZC7"></ComboBoxItem>
+                                        <ComboBoxItem Content="ZC8"></ComboBoxItem>
+                                        <ComboBoxItem Content="车辆段"></ComboBoxItem>
+                                        <ComboBoxItem Content="试车线"></ComboBoxItem>
+                                        <ComboBoxItem Content="全部"></ComboBoxItem>
+                                    </ComboBox>
+                                </StackPanel>-->
+                                <!--<StackPanel Margin="2,5,0,0">
+                                    <Label Content="线路编号:" Width="65" Margin="20,0,0,0" />
+                                    <TextBox x:Name="tb_NID_L" Width="100"></TextBox>
+                                </StackPanel>
+                                <StackPanel Margin="2,5,0,0">
+                                    <Label Content="地图版本信息:" Width="100" Margin="20,0,0,0" />
+                                    <TextBox x:Name="tb_M_EDITION" Width="100"></TextBox>
+                                </StackPanel>-->
+                            </StackPanel>
+
+                            <StackPanel VerticalAlignment="Bottom"  >
+                                <Button  x:Name="DataGenerateButton" Content="生成" Click="DataGenerateButton_Click" />
+                            </StackPanel>
+
+                        </Grid>
+                    </GroupBox.Content>
+                </GroupBox>
+
+                <GroupBox Grid.Row="1"  Margin="0,8,14,0" BorderBrush="#DCDCDC">
+                    <GroupBox.Header>数据比较</GroupBox.Header>
+                    <GroupBox.Content>
+                        <Grid>
+                            <StackPanel MinWidth="400" Orientation="Vertical">
+
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type StackPanel}">
+                                        <Setter Property="Orientation" Value="Horizontal" />
+                                        <Setter Property="Margin" Value="0,0,0,4" />
+                                    </Style>
+                                    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+                                        <Setter Property="Width" Value="100" />
+                                        <Setter Property="VerticalAlignment" Value="Center" />
+                                    </Style>
+                                    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">
+                                        <Setter Property="Padding" Value="0,3" />
+                                    </Style>
+                                    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource {x:Type RadioButton}}">
+                                        <Setter Property="Padding" Value="0,3" />
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <StackPanel Margin="2,5,0,0">
+                                    <Label Content="A链数据路径:" Width="74" Margin="4,0,0,0" />
+                                    <TextBox x:Name="ADataPathTextBox" IsReadOnly="True" Width="275" Height="24" Margin="5,0,0,0" />
+                                    <Button x:Name="ADataPathButton" Content="选择" Margin="5,0,0,0"  HorizontalAlignment="Left" Click="ADataPathButton_Click"  />
+                                </StackPanel>
+
+                                <StackPanel Margin="2,5,0,0">
+                                    <Label Content="B链数据路径:" Width="75" Margin="4,0,0,0" />
+                                    <TextBox x:Name="BDataPathTextBox" IsReadOnly="True" Width="275" Height="24"  Margin="5,0,0,0"/>
+                                    <Button x:Name="BDataPathButton" Content="选择" Margin="5,0,0,0"  HorizontalAlignment="Left"  Click="BDataPathButton_Click" />
+                                </StackPanel>
+                                <StackPanel Margin="2,5,0,0">
+                                    <Label Content="非AB链比较:"  Margin="4,0,0,0" Width="75"/>
+                                    <CheckBox x:Name="CBICompareCheckBox" Margin="5,0,0,0"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel VerticalAlignment="Bottom" >
+                                <Button  x:Name="DataCompareButton" Content="比较" Click="DataCompareButton_Click" />
+                            </StackPanel>
+
+                        </Grid>
+                    </GroupBox.Content>
+                </GroupBox>
+
+            </Grid>
+        </ScrollViewer>
+
+        <GridSplitter Grid.Column="1" />
+
+        <ScrollViewer Grid.Column="2"  Margin="{StaticResource SplitRight}" VerticalScrollBarVisibility="Disabled">
+
+            <Grid MinWidth="350" >
+                <Label Content="报警信息:" Width="63" HorizontalAlignment="Left" />
+                <RichTextBox x:Name="AlarmRichTextBox" IsReadOnly="True" Margin="0,20,0,0"  VerticalScrollBarVisibility="Visible"/>
+                
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

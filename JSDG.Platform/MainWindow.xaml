@@ -1,0 +1,21 @@
+﻿<mui:ModernWindow x:Class="JSDG.Platform.MainWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"          
+                  xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+                  Title="铁路信号系统数据生成(JSDG)"
+                  IsTitleVisible="True"                 
+                  WindowState="Maximized"                 
+                  ContentSource="/Content/ETBDataGeneratorUC.xaml" 
+                  MinWidth="940"
+                  MinHeight="300" 
+                 Style="{StaticResource ModernWindowExtendStyle}">
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="临时大铁">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="CBI_TCC" Source="/Content/ETBDataGeneratorUC.xaml" />
+                <mui:Link DisplayName="TCC_TCC" Source="/Content/TCC_TCCDataGeneratorUC.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>
+
